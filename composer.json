@@ -1,22 +1,20 @@
 {
-    "name": "encore/laravel-admin",
-    "description": "laravel admin",
+    "name": "jackchow/simple-task",
+    "description": "a simple-task",
     "type": "library",
-    "keywords": ["laravel", "admin", "grid", "form"],
-    "homepage": "https://github.com/z-song/laravel-admin",
+    "keywords": ["laravel", "task"],
+    "homepage": "https://github.com/jackchow123456/simple-task",
     "license": "MIT",
-    "version": "v1.7.14",
+    "version": "v1.0",
     "authors": [
         {
-            "name": "zsong",
-            "email": "zosong@126.com"
+            "name": "zhouminjie",
+            "email": "775893055@qq.com"
         }
     ],
     "require": {
         "php": ">=7.0.0",
-        "symfony/dom-crawler": "~3.1|~4.0|~5.0",
-        "laravel/framework": ">=5.5",
-        "doctrine/dbal": "2.*"
+        "laravel/framework": ">=5.5"
     },
     "require-dev": {
         "laravel/laravel": ">=5.5",
@@ -26,37 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\Admin\\": "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\Models\\": "tests/models",
-            "Tests\\Controllers\\": "tests/controllers"
-        },
-        "classmap": [
-            "tests/TestCase.php"
-        ]
-    },
-    "scripts": {
-        "test": "./vendor/bin/phpunit"
-    },
-    "suggest": {
-        "intervention/image": "Required to handling and manipulation upload images (~2.3).",
-        "spatie/eloquent-sortable": "Required to built orderable gird."
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Encore\\Admin\\AdminServiceProvider"
-            ],
-            "aliases": {
-                "Admin": "Encore\\Admin\\Facades\\Admin"
-            }
-
+            "SimpleTask\\" : "src/"
         }
     }
 }
