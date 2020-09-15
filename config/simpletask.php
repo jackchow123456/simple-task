@@ -8,7 +8,7 @@
 
 return [
 
-    'model' => \SimpleTask\SimpleTaskModel::class,
+    'model' => \JackChow\SimpleTask\SimpleTaskModel::class,
 
     'table_name' => 'simple_task',
 ];
