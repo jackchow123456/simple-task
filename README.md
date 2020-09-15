@@ -14,7 +14,7 @@ composer require jackchow/simple-task
 配置
 ------------
 ```
-php artisan vendor:publish --provider="JackChow\\SimpleTask\SimpleTaskServerProvider"
+php artisan vendor:publish --provider="JackChow\SimpleTask\SimpleTaskServiceProvider"
 ```
 配置文件 `config/simpletask.php` 会生成，你可以在这里修改应用默认的配置.
 
@@ -30,7 +30,7 @@ php artisan vendor:publish --provider="JackChow\\SimpleTask\SimpleTaskServerProv
 ### 示例代码
 Test.php
 ``` 
-use Jackchow\\SimpleTask\SimpleTask;
+use JackChow\SimpleTask\SimpleTask;
 
 class Test
 {
@@ -55,7 +55,7 @@ class Test
 
 TestJob.php
 ```
-use Jackchow\\SimpleTask\SimpleTaskJob;
+use JackChow\SimpleTask\SimpleTaskJob;
 
 class TestJob extends SimpleTaskJob
 {

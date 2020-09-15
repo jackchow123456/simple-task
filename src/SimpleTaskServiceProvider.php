@@ -26,8 +26,8 @@ class SimpleTaskServiceProvider extends ServiceProvider
     protected function registerPublishing()
     {
         if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__ . '/config' => config_path()], 'simple-task-config');
-            $this->publishes([__DIR__ . '/database/migrations' => database_path('migrations')], 'simple-task-migrations');
+            $this->publishes([__DIR__ . '/../config' => config_path()], 'simple-task-config');
+            $this->publishes([__DIR__ . '/../database/migrations' => database_path('migrations')], 'simple-task-migrations');
         }
     }
 }
