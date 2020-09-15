@@ -6,7 +6,7 @@
  * Time: 14:15
  */
 
-namespace SimpleTask;
+namespace JackChow\SimpleTask;
 
 class SimpleTask
 {

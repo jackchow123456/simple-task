@@ -6,7 +6,7 @@
  * Time: 17:22
  */
 
-namespace SimpleTask;
+namespace JackChow\SimpleTask;
 
 use Illuminate\Support\ServiceProvider;
 

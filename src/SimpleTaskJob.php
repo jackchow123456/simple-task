@@ -6,7 +6,7 @@
  * Time: 14:15
  */
 
-namespace SimpleTask;
+namespace JackChow\SimpleTask;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
