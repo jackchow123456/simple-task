@@ -24,7 +24,14 @@
     },
     "autoload": {
         "psr-4": {
-            "SimpleTask\\" : "src/"
+            "JackChow\\SimpleTask\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JackChow\\SimpleTask\\SimpleTaskServiceProvider"
+            ]
         }
     }
 }

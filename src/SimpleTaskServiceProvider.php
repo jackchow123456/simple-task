@@ -10,7 +10,7 @@ namespace SimpleTask;
 
 use Illuminate\Support\ServiceProvider;
 
-class SimpleTaskServerProvider extends ServiceProvider
+class SimpleTaskServiceProvider extends ServiceProvider
 {
 
     public function boot()
