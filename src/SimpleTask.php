@@ -28,4 +28,15 @@ class SimpleTask
     {
         return app(config('simpletask.model'));
     }
+
+
+    public function __call($name, $arguments)
+    {
+        return app(config('simpletask.model'))->$name(...$arguments);
+    }
+
+    public static function __callStatic($name, $arguments)
+    {
+        return self::model()->$name(...$arguments);
+    }
 }

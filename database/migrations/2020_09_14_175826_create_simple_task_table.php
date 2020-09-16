@@ -16,13 +16,14 @@ class CreateSimpleTaskTable extends Migration
         Schema::create(config('simpletask.table_name'), function (Blueprint $table) {
             $table->bigIncrements('id')->comment('主键ID');
             $table->integer('creator_id')->default(0)->comment('发起任务用户Id');
-            $table->text('name')->comment('任务名称');
-            $table->text('type')->comment('任务类型');
+            $table->string('name', 20)->comment('任务名称');
+            $table->string('type', 10)->comment('任务类型');
             $table->tinyInteger('status')->comment('任务状态{0:未开始，1:进行中，2:已完成，3:已取消，4:异常终止}');
-            $table->longText('params')->comment('任务参数');
-            $table->longText('file_path')->comment('数据文件路径');
+            $table->text('params')->comment('任务参数');
+            $table->string('params_desc', 100)->comment('参数描述');
+            $table->string('file_path', 64)->comment('数据文件路径');
             $table->tinyInteger('is_deleted')->comment('文件是否已经被删除{0:否，1:是}');
-            $table->text('message')->comment('异常终止信息');
+            $table->string('message', 100)->comment('异常终止信息');
             $table->timestamps();
         });
     }

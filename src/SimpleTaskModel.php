@@ -23,4 +23,20 @@ class SimpleTaskModel extends Model
         parent::__construct($attributes);
         $this->setTable(config('simpletask.table_name'));
     }
+
+
+    public function scopeIsProcessing($query)
+    {
+        return $query->where('status', 1)->first() ? true : false;
+    }
+
+    public function scopeName($query, $name)
+    {
+        return $query->where('name', $name);
+    }
+
+    public function scopeCreator($query, $creatorId)
+    {
+        return $query->where('creator_id', $creatorId);
+    }
 }

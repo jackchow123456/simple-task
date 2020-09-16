@@ -44,10 +44,16 @@ class Test
             'type' => '导出任务', // 任务类型（标识/描述）
             'creator_id' => 0,  // 发起者id
             'params' => ['the_month' => '2020-09'], // 任务参数
+            'params_desc' => '所属月份：2020-09', // 参数描述
         ])->handle(TestJob::class);
         
         // 获取任务列表
-        SimpleTask::model()->all()
+        SimpleTask::model()->all();
+        
+        // 获取当前是否有任务进行
+        SimpleTask::isProcessing();
+        SimpleTask::name('测试任务 - 导出2020年9月份订单数据')->isProcessing();
+        SimpleTask::name('测试任务 - 导出2020年9月份订单数据')->creator(0)->isProcessing();
     }
 }
 
