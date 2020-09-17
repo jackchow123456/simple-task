@@ -77,5 +77,9 @@ class TestJob extends SimpleTaskJob
 ```
 
 
+### 提示
+本队列默认超市时间为 10 分钟， 若超过该时间进程将会被kill掉.
+
+
 
 

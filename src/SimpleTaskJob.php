@@ -35,6 +35,13 @@ abstract class SimpleTaskJob implements ShouldQueue
      */
     public $tries = 3;
 
+    /**
+     * 在超时之前任务可以运行的秒数
+     *
+     * @var int
+     */
+    public $timeout = 600;
+
     public function __construct($task)
     {
         $this->task = $task;
