@@ -30,6 +30,12 @@ class SimpleTaskModel extends Model
         return $query->where('status', 1)->first() ? true : false;
     }
 
+
+    public function scopeIsCreated($query)
+    {
+        return $query->whereIn('status', [0, 1])->first() ? true : false;
+    }
+
     public function scopeName($query, $name)
     {
         return $query->where('name', $name);

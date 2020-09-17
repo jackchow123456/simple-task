@@ -54,6 +54,9 @@ class Test
         SimpleTask::isProcessing();
         SimpleTask::name('测试任务 - 导出2020年9月份订单数据')->isProcessing();
         SimpleTask::name('测试任务 - 导出2020年9月份订单数据')->creator(0)->isProcessing();
+        
+        // 查询指定任务是否已创建
+        SimpleTask::name('测试任务 - 导出2020年9月份订单数据')->creator(0)->isCreated();
     }
 }
 
