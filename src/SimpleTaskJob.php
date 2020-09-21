@@ -54,6 +54,8 @@ abstract class SimpleTaskJob implements ShouldQueue
      */
     public function handle()
     {
+        ini_set('memory_limit', '512M');
+
         $this->task->status = 1;
         $this->task->save();
 
@@ -61,7 +63,6 @@ abstract class SimpleTaskJob implements ShouldQueue
 
         $this->task->status = 2;
         $this->task->save();
-//        throw new \Exception('测试错误信息');
     }
 
     /**
@@ -73,7 +74,7 @@ abstract class SimpleTaskJob implements ShouldQueue
     public function failed(\Exception $exception)
     {
         $this->task->status = 4;
-        $this->task->message = $exception->getMessage();
+        $this->task->message = '发生系统错误';
         $this->task->save();
         throw $exception;
     }
