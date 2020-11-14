@@ -21,7 +21,7 @@ class SimpleTask
 
     public function handle($job)
     {
-        $job::dispatch($this->task);
+        return $job::dispatch($this->task);
     }
 
     public static function model()
